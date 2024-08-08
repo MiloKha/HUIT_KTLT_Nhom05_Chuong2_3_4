@@ -165,6 +165,23 @@ void xuat_hoan_thien(int a[], int n) {
     printf("\n");
 }
 
+// Hàm xuất các phần tử ở vị trí chẵn
+void xuat_vi_tri_chan(int a[], int n) {
+    printf("Cac phan tu o vi tri chan: ");
+    for (int i = 0; i < n; i += 2) {
+        printf("%d ", a[i]);
+    }
+    printf("\n");
+}
+
+// Hàm xuất các phần tử ở vị trí lẻ
+void xuat_vi_tri_le(int a[], int n) {
+    printf("Cac phan tu o vi tri le: ");
+    for (int i = 1; i < n; i += 2) {
+        printf("%d ", a[i]);
+    }
+    printf("\n");
+}
 
 
 
@@ -250,6 +267,10 @@ int main() {
             break;
         case 9:
             xuat_hoan_thien(a, n);
+            break;
+        case 10:
+            xuat_vi_tri_chan(a, n);
+            xuat_vi_tri_le(a, n);
             break;
         case 0:
             printf("Thoat chuong trinh\n");
