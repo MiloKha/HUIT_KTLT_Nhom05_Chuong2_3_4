@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\lephu\\OneDrive\\Desktop\\Chuong04\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6CC07B04-E88F-46E6-8835-1E155EE12672}|Chuong04\\Chuong04.vcxproj|C:\\Users\\lephu\\OneDrive\\Desktop\\Chuong04\\Chuong04\\Chuong4_BT_Trang27.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6CC07B04-E88F-46E6-8835-1E155EE12672}|Chuong04\\Chuong04.vcxproj|solutionrelative:Chuong04\\Chuong4_BT_Trang27.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CC07B04-E88F-46E6-8835-1E155EE12672}|Chuong04\\Chuong04.vcxproj|C:\\Users\\lephu\\OneDrive\\Desktop\\Chuong04\\Chuong04\\Chuong4_BT_Trang28.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6CC07B04-E88F-46E6-8835-1E155EE12672}|Chuong04\\Chuong04.vcxproj|solutionrelative:Chuong04\\Chuong4_BT_Trang28.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Chuong4_BT_Trang28.cpp",
+              "DocumentMoniker": "C:\\Users\\lephu\\OneDrive\\Desktop\\Chuong04\\Chuong04\\Chuong4_BT_Trang28.cpp",
+              "RelativeDocumentMoniker": "Chuong04\\Chuong4_BT_Trang28.cpp",
+              "ToolTip": "C:\\Users\\lephu\\OneDrive\\Desktop\\Chuong04\\Chuong04\\Chuong4_BT_Trang28.cpp",
+              "RelativeToolTip": "Chuong04\\Chuong4_BT_Trang28.cpp",
+              "ViewState": "AQIAALQAAAAAAAAAAAAuwMAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-08-08T09:12:23.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Chuong4_BT_Trang27.cpp",
+              "DocumentMoniker": "C:\\Users\\lephu\\OneDrive\\Desktop\\Chuong04\\Chuong04\\Chuong4_BT_Trang27.cpp",
+              "RelativeDocumentMoniker": "Chuong04\\Chuong4_BT_Trang27.cpp",
+              "ToolTip": "C:\\Users\\lephu\\OneDrive\\Desktop\\Chuong04\\Chuong04\\Chuong4_BT_Trang27.cpp",
+              "RelativeToolTip": "Chuong04\\Chuong4_BT_Trang27.cpp",
+              "ViewState": "AQIAAIcAAAAAAAAAAAAuwLAAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-08-08T09:09:56.408Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

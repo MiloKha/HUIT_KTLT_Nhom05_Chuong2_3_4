@@ -1,0 +1,5 @@
+﻿  Chuong3_BT_Trang24&25.cpp
+C:\Users\lephu\source\repos\Chuong03\Chuong03\Chuong3_BT_Trang24&25.cpp(70,16): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\lephu\source\repos\Chuong03\Chuong03\Chuong3_BT_Trang24&25.cpp(71,17): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\lephu\source\repos\Chuong03\Chuong03\Chuong3_BT_Trang24&25.cpp(87,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Chuong03.vcxproj -> C:\Users\lephu\source\repos\Chuong03\x64\Debug\Chuong03.exe

@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\lephu\\OneDrive\\Desktop\\Chuong02\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{52CE5FB4-462B-44C5-BF32-442C858A6C80}|Chuong02\\Chuong02.vcxproj|C:\\Users\\lephu\\OneDrive\\Desktop\\Chuong02\\Chuong02\\Chuong2_Mang2C_Trang82.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{52CE5FB4-462B-44C5-BF32-442C858A6C80}|Chuong02\\Chuong02.vcxproj|solutionrelative:Chuong02\\Chuong2_Mang2C_Trang82.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52CE5FB4-462B-44C5-BF32-442C858A6C80}|Chuong02\\Chuong02.vcxproj|C:\\Users\\lephu\\OneDrive\\Desktop\\Chuong02\\Chuong02\\Chuong2_Mang2C_Trang78.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{52CE5FB4-462B-44C5-BF32-442C858A6C80}|Chuong02\\Chuong02.vcxproj|solutionrelative:Chuong02\\Chuong2_Mang2C_Trang78.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52CE5FB4-462B-44C5-BF32-442C858A6C80}|Chuong02\\Chuong02.vcxproj|C:\\Users\\lephu\\OneDrive\\Desktop\\Chuong02\\Chuong02\\Chuong2_Bai3_TTSV_Trang70.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{52CE5FB4-462B-44C5-BF32-442C858A6C80}|Chuong02\\Chuong02.vcxproj|solutionrelative:Chuong02\\Chuong2_Bai3_TTSV_Trang70.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52CE5FB4-462B-44C5-BF32-442C858A6C80}|Chuong02\\Chuong02.vcxproj|C:\\Users\\lephu\\OneDrive\\Desktop\\Chuong02\\Chuong02\\Chuong2_Bai3_DSSV_Trang71.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{52CE5FB4-462B-44C5-BF32-442C858A6C80}|Chuong02\\Chuong02.vcxproj|solutionrelative:Chuong02\\Chuong2_Bai3_DSSV_Trang71.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52CE5FB4-462B-44C5-BF32-442C858A6C80}|Chuong02\\Chuong02.vcxproj|C:\\Users\\lephu\\OneDrive\\Desktop\\Chuong02\\Chuong02\\Chuong2_Mang2C_Trang86.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{52CE5FB4-462B-44C5-BF32-442C858A6C80}|Chuong02\\Chuong02.vcxproj|solutionrelative:Chuong02\\Chuong2_Mang2C_Trang86.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Chuong2_Mang2C_Trang86.cpp",
+              "DocumentMoniker": "C:\\Users\\lephu\\OneDrive\\Desktop\\Chuong02\\Chuong02\\Chuong2_Mang2C_Trang86.cpp",
+              "RelativeDocumentMoniker": "Chuong02\\Chuong2_Mang2C_Trang86.cpp",
+              "ToolTip": "C:\\Users\\lephu\\OneDrive\\Desktop\\Chuong02\\Chuong02\\Chuong2_Mang2C_Trang86.cpp",
+              "RelativeToolTip": "Chuong02\\Chuong2_Mang2C_Trang86.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAALgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-08-08T06:03:05.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Chuong2_Mang2C_Trang82.cpp",
+              "DocumentMoniker": "C:\\Users\\lephu\\OneDrive\\Desktop\\Chuong02\\Chuong02\\Chuong2_Mang2C_Trang82.cpp",
+              "RelativeDocumentMoniker": "Chuong02\\Chuong2_Mang2C_Trang82.cpp",
+              "ToolTip": "C:\\Users\\lephu\\OneDrive\\Desktop\\Chuong02\\Chuong02\\Chuong2_Mang2C_Trang82.cpp",
+              "RelativeToolTip": "Chuong02\\Chuong2_Mang2C_Trang82.cpp",
+              "ViewState": "AQIAAPYAAAAAAAAAAAAuwAQBAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-08-08T06:02:22.572Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Chuong2_Mang2C_Trang78.cpp",
+              "DocumentMoniker": "C:\\Users\\lephu\\OneDrive\\Desktop\\Chuong02\\Chuong02\\Chuong2_Mang2C_Trang78.cpp",
+              "RelativeDocumentMoniker": "Chuong02\\Chuong2_Mang2C_Trang78.cpp",
+              "ToolTip": "C:\\Users\\lephu\\OneDrive\\Desktop\\Chuong02\\Chuong02\\Chuong2_Mang2C_Trang78.cpp",
+              "RelativeToolTip": "Chuong02\\Chuong2_Mang2C_Trang78.cpp",
+              "ViewState": "AQIAAKsAAAAAAAAAAAAuwPcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-08-08T06:01:32.501Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Chuong2_Bai3_DSSV_Trang71.cpp",
+              "DocumentMoniker": "C:\\Users\\lephu\\OneDrive\\Desktop\\Chuong02\\Chuong02\\Chuong2_Bai3_DSSV_Trang71.cpp",
+              "RelativeDocumentMoniker": "Chuong02\\Chuong2_Bai3_DSSV_Trang71.cpp",
+              "ToolTip": "C:\\Users\\lephu\\OneDrive\\Desktop\\Chuong02\\Chuong02\\Chuong2_Bai3_DSSV_Trang71.cpp",
+              "RelativeToolTip": "Chuong02\\Chuong2_Bai3_DSSV_Trang71.cpp",
+              "ViewState": "AQIAALsAAAAAAAAAAAAjwC4BAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-08-08T06:00:22.895Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Chuong2_Bai3_TTSV_Trang70.cpp",
+              "DocumentMoniker": "C:\\Users\\lephu\\OneDrive\\Desktop\\Chuong02\\Chuong02\\Chuong2_Bai3_TTSV_Trang70.cpp",
+              "RelativeDocumentMoniker": "Chuong02\\Chuong2_Bai3_TTSV_Trang70.cpp",
+              "ToolTip": "C:\\Users\\lephu\\OneDrive\\Desktop\\Chuong02\\Chuong02\\Chuong2_Bai3_TTSV_Trang70.cpp",
+              "RelativeToolTip": "Chuong02\\Chuong2_Bai3_TTSV_Trang70.cpp",
+              "ViewState": "AQIAAJEAAAAAAAAAAAAuwO8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-08-08T06:00:59.794Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
