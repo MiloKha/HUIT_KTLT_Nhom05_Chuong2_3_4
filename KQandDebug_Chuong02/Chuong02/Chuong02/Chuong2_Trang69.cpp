@@ -40,6 +40,27 @@ void xuat_danh_sach(PhanSo arr[], int n) {
     }
 }
 
+// Hàm tìm phân số có giá trị lớn nhất
+PhanSo tim_phan_so_lon_nhat(PhanSo arr[], int n) {
+    PhanSo max = arr[0];
+    for (int i = 1; i < n; ++i) {
+        if ((arr[i].tu_so * max.mau_so) > (max.tu_so * arr[i].mau_so)) {
+            max = arr[i];
+        }
+    }
+    return max;
+}
+
+// Hàm tìm phân số có giá trị nhỏ nhất
+PhanSo tim_phan_so_nho_nhat(PhanSo arr[], int n) {
+    PhanSo min = arr[0];
+    for (int i = 1; i < n; ++i) {
+        if ((arr[i].tu_so * min.mau_so) < (min.tu_so * arr[i].mau_so)) {
+            min = arr[i];
+        }
+    }
+    return min;
+}
 
 
 void menu() {
@@ -68,6 +89,16 @@ void menu() {
             break;
         case 2:
             xuat_danh_sach(arr, n);
+            break;
+        case 3:
+            ket_qua = tim_phan_so_lon_nhat(arr, n);
+            printf("Phan so lon nhat: ");
+            xuat_danh_sach(&ket_qua, 1);
+            break;
+        case 4:
+            ket_qua = tim_phan_so_nho_nhat(arr, n);
+            printf("Phan so nho nhat: ");
+            xuat_danh_sach(&ket_qua, 1);
             break;
         case 0:
             printf("Thoat chuong trinh.\n");
