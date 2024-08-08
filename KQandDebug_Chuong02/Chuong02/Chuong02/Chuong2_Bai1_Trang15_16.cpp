@@ -93,6 +93,18 @@ int tim_kiem_nhi_phan(int a[], int n, int x) {
     return -1;
 }
 
+// Hàm đếm số phần tử x trong mảng
+int dem_phan_tu_x(int a[], int n, int x) {
+    int count = 0;
+    for (int i = 0; i < n; i++) {
+        if (a[i] == x) {
+            count++;
+        }
+    }
+    return count;
+}
+
+
 
 
 
@@ -158,6 +170,11 @@ int main() {
             else {
                 printf("Tim kiem nhi phan: Khong tim thay gia tri %d trong mang\n", x);
             }
+            break;
+        case 5:
+            printf("Nhap gia tri can dem: ");
+            scanf_s("%d", &x);
+            printf("So phan tu %d trong mang: %d\n", x, dem_phan_tu_x(a, n, x));
             break;
         case 0:
             printf("Thoat chuong trinh\n");
