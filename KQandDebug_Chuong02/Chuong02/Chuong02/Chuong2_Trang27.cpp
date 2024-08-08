@@ -21,6 +21,14 @@ bool tat_ca_chu_so_le(int x) {
     return true;
 }
 
+// Hàm kiểm tra mảng có toàn là số chẵn không
+bool tat_ca_so_chan(int* a, int n) {
+    for (int i = 0; i < n; i++) {
+        if (a[i] % 2 != 0) return false;
+    }
+    return true;
+}
+
 int main() {
     int lua_chon, n;
 
@@ -91,6 +99,15 @@ int main() {
                 }
             }
             printf("Vi tri cuoi cung cua so lon nhat: %d\n", vi_tri_cuoi);
+            break;
+        }
+        case 4: {
+            if (tat_ca_so_chan(a, n)) {
+                printf("Mang toan la so chan.\n");
+            }
+            else {
+                printf("Mang khong toan la so chan.\n");
+            }
             break;
         }
         case 0:
