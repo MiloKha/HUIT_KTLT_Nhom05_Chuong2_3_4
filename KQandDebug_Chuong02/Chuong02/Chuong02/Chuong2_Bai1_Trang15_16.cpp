@@ -21,6 +21,28 @@ void xuat_mang(int a[], int n) {
     printf("\n");
 }
 
+// Hàm tìm max của mảng
+int tim_max(int a[], int n) {
+    int max = a[0];
+    for (int i = 1; i < n; i++) {
+        if (a[i] > max) {
+            max = a[i];
+        }
+    }
+    return max;
+}
+
+// Hàm tìm min của mảng
+int tim_min(int a[], int n) {
+    int min = a[0];
+    for (int i = 1; i < n; i++) {
+        if (a[i] < min) {
+            min = a[i];
+        }
+    }
+    return min;
+}
+
 int main() {
     int lua_chon, n, x, vi_tri;
     printf("Nhap so phan tu cua mang: ");
@@ -55,6 +77,10 @@ int main() {
         switch (lua_chon) {
         case 1:
             xuat_mang(a, n);
+            break;
+        case 2:
+            printf("Gia tri lon nhat cua mang: %d\n", tim_max(a, n));
+            printf("Gia tri nho nhat cua mang: %d\n", tim_min(a, n));
             break;
         case 0:
             printf("Thoat chuong trinh\n");
