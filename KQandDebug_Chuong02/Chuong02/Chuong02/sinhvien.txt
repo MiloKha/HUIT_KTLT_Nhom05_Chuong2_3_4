@@ -1,0 +1,21 @@
+So thu tu: 1
+Ma so: 1
+Ho ten: Kha
+Diem tieu luan: 5.00
+Diem thi: 6.00
+Diem tong ket: 5.70
+------------------------
+So thu tu: 2
+Ma so: 2
+Ho ten: Tran
+Diem tieu luan: 3.00
+Diem thi: 6.00
+Diem tong ket: 5.10
+------------------------
+So thu tu: 3
+Ma so: 6
+Ho ten: Khoi
+Diem tieu luan: 7.00
+Diem thi: 8.00
+Diem tong ket: 7.70
+------------------------

@@ -45,5 +45,8 @@
     <ClCompile Include="Chuong2_Trang69.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Chuong2_Trang70.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
