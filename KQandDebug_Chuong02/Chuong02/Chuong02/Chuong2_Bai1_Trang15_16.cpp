@@ -183,7 +183,24 @@ void xuat_vi_tri_le(int a[], int n) {
     printf("\n");
 }
 
-
+// Hàm xuất giá trị max/min kèm vị trí
+void xuat_max_min_va_vi_tri(int a[], int n) {
+    int max = tim_max(a, n);
+    int min = tim_min(a, n);
+    printf("Gia tri lon nhat: %d o vi tri ", max);
+    for (int i = 0; i < n; i++) {
+        if (a[i] == max) {
+            printf("%d ", i);
+        }
+    }
+    printf("\nGia tri nho nhat: %d o vi tri ", min);
+    for (int i = 0; i < n; i++) {
+        if (a[i] == min) {
+            printf("%d ", i);
+        }
+    }
+    printf("\n");
+}
 
 
 int main() {
@@ -271,6 +288,9 @@ int main() {
         case 10:
             xuat_vi_tri_chan(a, n);
             xuat_vi_tri_le(a, n);
+            break;
+        case 11:
+            xuat_max_min_va_vi_tri(a, n);
             break;
         case 0:
             printf("Thoat chuong trinh\n");
