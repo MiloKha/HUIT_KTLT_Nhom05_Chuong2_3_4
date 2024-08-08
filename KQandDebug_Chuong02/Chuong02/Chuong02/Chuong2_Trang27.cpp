@@ -29,6 +29,15 @@ bool tat_ca_so_chan(int* a, int n) {
     return true;
 }
 
+// Hàm kiểm tra mảng có phải là dãy số chẵn lẻ xen kẻ không
+bool day_chan_le_xen_ke(int* a, int n) {
+    if (n < 2) return true; // Nếu mảng có ít hơn 2 phần tử thì tự động là đúng
+    for (int i = 0; i < n - 1; i++) {
+        if ((a[i] % 2 == a[i + 1] % 2)) return false;
+    }
+    return true;
+}
+
 int main() {
     int lua_chon, n;
 
@@ -107,6 +116,15 @@ int main() {
             }
             else {
                 printf("Mang khong toan la so chan.\n");
+            }
+            break;
+        }
+        case 5: {
+            if (day_chan_le_xen_ke(a, n)) {
+                printf("Mang la day so chan le xen ke.\n");
+            }
+            else {
+                printf("Mang khong phai day so chan le xen ke.\n");
             }
             break;
         }
