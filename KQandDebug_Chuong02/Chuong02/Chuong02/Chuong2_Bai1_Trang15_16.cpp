@@ -104,7 +104,16 @@ int dem_phan_tu_x(int a[], int n, int x) {
     return count;
 }
 
-
+// Hàm đếm số phần tử lớn hơn x trong mảng
+int dem_lon_hon_x(int a[], int n, int x) {
+    int count = 0;
+    for (int i = 0; i < n; i++) {
+        if (a[i] > x) {
+            count++;
+        }
+    }
+    return count;
+}
 
 
 
@@ -175,6 +184,11 @@ int main() {
             printf("Nhap gia tri can dem: ");
             scanf_s("%d", &x);
             printf("So phan tu %d trong mang: %d\n", x, dem_phan_tu_x(a, n, x));
+            break;
+        case 6:
+            printf("Nhap gia tri x: ");
+            scanf_s("%d", &x);
+            printf("So phan tu lon hon %d trong mang: %d\n", x, dem_lon_hon_x(a, n, x));
             break;
         case 0:
             printf("Thoat chuong trinh\n");
