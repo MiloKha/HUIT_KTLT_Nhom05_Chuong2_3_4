@@ -124,6 +124,32 @@ int tong_mang(int a[], int n) {
     return sum;
 }
 
+// Hàm kiểm tra số nguyên tố
+bool la_nguyen_to(int n) {
+    if (n < 2) return false;
+    for (int i = 2; i <= n / 2; i++) {
+        if (n % i == 0) return false;
+    }
+    return true;
+}
+
+// Hàm xuất các số nguyên tố trong mảng
+void xuat_nguyen_to(int a[], int n) {
+    printf("Cac so nguyen to trong mang: ");
+    for (int i = 0; i < n; i++) {
+        if (la_nguyen_to(a[i])) {
+            printf("%d ", a[i]);
+        }
+    }
+    printf("\n");
+}
+
+
+
+
+
+
+
 int main() {
     int lua_chon, n, x, vi_tri;
     printf("Nhap so phan tu cua mang: ");
@@ -199,6 +225,9 @@ int main() {
             break;
         case 7:
             printf("Tong cac phan tu trong mang: %d\n", tong_mang(a, n));
+            break;
+        case 8:
+            xuat_nguyen_to(a, n);
             break;
         case 0:
             printf("Thoat chuong trinh\n");
