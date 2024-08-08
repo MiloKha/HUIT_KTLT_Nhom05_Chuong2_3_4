@@ -144,7 +144,26 @@ void xuat_nguyen_to(int a[], int n) {
     printf("\n");
 }
 
+// Hàm kiểm tra số hoàn thiện
+bool la_hoan_thien(int n) {
+    if (n < 1) return false;
+    int sum = 0;
+    for (int i = 1; i <= n / 2; i++) {
+        if (n % i == 0) sum += i;
+    }
+    return sum == n;
+}
 
+// Hàm xuất các số hoàn thiện trong mảng
+void xuat_hoan_thien(int a[], int n) {
+    printf("Cac so hoan thien trong mang: ");
+    for (int i = 0; i < n; i++) {
+        if (la_hoan_thien(a[i])) {
+            printf("%d ", a[i]);
+        }
+    }
+    printf("\n");
+}
 
 
 
@@ -228,6 +247,9 @@ int main() {
             break;
         case 8:
             xuat_nguyen_to(a, n);
+            break;
+        case 9:
+            xuat_hoan_thien(a, n);
             break;
         case 0:
             printf("Thoat chuong trinh\n");
