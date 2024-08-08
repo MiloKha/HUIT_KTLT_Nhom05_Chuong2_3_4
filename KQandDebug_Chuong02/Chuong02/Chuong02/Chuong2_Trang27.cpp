@@ -1,215 +1,59 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+﻿#include <stdio.h>
+#include <stdlib.h> // Bao gồm thư viện cần thiết cho malloc và free
+#include <stdbool.h>
 
-
-void hoan_doi_int(int* a, int* b) {
-    int temp = *a;
-    *a = *b;
-    *b = temp;
-}
-
-void hoan_doi_float(float* a, float* b) {
-    float temp = *a;
-    *a = *b;
-    *b = temp;
-}
-
-void hoan_doi_char(char* a, char* b) {
-    char temp = *a;
-    *a = *b;
-    *b = temp;
-}
-
-void hoan_doi_str(char* a, char* b) {
-    char temp[100];
-    strncpy_s(temp, sizeof(temp), a, _TRUNCATE);
-    strncpy_s(a, sizeof(temp), b, _TRUNCATE);
-    strncpy_s(b, sizeof(temp), temp, _TRUNCATE);
-}
-
-void sap_xep_tang_int(int* a, int n) {
-    for (int i = 0; i < n - 1; i++) {
-        for (int j = i + 1; j < n; j++) {
-            if (a[i] > a[j]) {
-                hoan_doi_int(&a[i], &a[j]);
-            }
-        }
+// Hàm kiểm tra số nguyên tố
+bool la_so_nguyen_to(int x) {
+    if (x <= 1) return false;
+    for (int i = 2; i * i <= x; i++) {
+        if (x % i == 0) return false;
     }
+    return true;
 }
 
-void sap_xep_giam_int(int* a, int n) {
-    for (int i = 0; i < n - 1; i++) {
-        for (int j = i + 1; j < n; j++) {
-            if (a[i] < a[j]) {
-                hoan_doi_int(&a[i], &a[j]);
-            }
-        }
+// Hàm kiểm tra các chữ số của số có phải là số lẻ không
+bool tat_ca_chu_so_le(int x) {
+    while (x > 0) {
+        int digit = x % 10;
+        if (digit % 2 == 0) return false; 
+        x /= 10;
     }
-}
-
-void sap_xep_tang_float(float* a, int n) {
-    for (int i = 0; i < n - 1; i++) {
-        for (int j = i + 1; j < n; j++) {
-            if (a[i] > a[j]) {
-                hoan_doi_float(&a[i], &a[j]);
-            }
-        }
-    }
-}
-
-void sap_xep_giam_float(float* a, int n) {
-    for (int i = 0; i < n - 1; i++) {
-        for (int j = i + 1; j < n; j++) {
-            if (a[i] < a[j]) {
-                hoan_doi_float(&a[i], &a[j]);
-            }
-        }
-    }
-}
-
-void sap_xep_tang_char(char* a, int n) {
-    for (int i = 0; i < n - 1; i++) {
-        for (int j = i + 1; j < n; j++) {
-            if (a[i] > a[j]) {
-                hoan_doi_char(&a[i], &a[j]);
-            }
-        }
-    }
-}
-
-void sap_xep_giam_char(char* a, int n) {
-    for (int i = 0; i < n - 1; i++) {
-        for (int j = i + 1; j < n; j++) {
-            if (a[i] < a[j]) {
-                hoan_doi_char(&a[i], &a[j]);
-            }
-        }
-    }
-}
-
-void sap_xep_tang_str(char** a, int n) {
-    for (int i = 0; i < n - 1; i++) {
-        for (int j = i + 1; j < n; j++) {
-            if (strcmp(a[i], a[j]) > 0) {
-                hoan_doi_str(a[i], a[j]);
-            }
-        }
-    }
-}
-
-void sap_xep_giam_str(char** a, int n) {
-    for (int i = 0; i < n - 1; i++) {
-        for (int j = i + 1; j < n; j++) {
-            if (strcmp(a[i], a[j]) < 0) {
-                hoan_doi_str(a[i], a[j]);
-            }
-        }
-    }
-}
-
-// Input functions
-void nhap_mang_int(int* a, int n) {
-    for (int i = 0; i < n; i++) {
-        printf("Nhap a[%d]: ", i);
-        if (scanf_s("%d", &a[i]) != 1) {
-            printf("Nhap sai! Vui long nhap lai.\n");
-            while (getchar() != '\n'); 
-        }
-    }
-}
-
-void nhap_mang_float(float* a, int n) {
-    for (int i = 0; i < n; i++) {
-        printf("Nhap a[%d]: ", i);
-        if (scanf_s("%f", &a[i]) != 1) {
-            printf("Nhap sai! Vui long nhap lai.\n");
-            while (getchar() != '\n'); 
-        }
-    }
-}
-
-void nhap_mang_char(char* a, int n) {
-    for (int i = 0; i < n; i++) {
-        printf("Nhap a[%d]: ", i);
-        if (scanf_s(" %c", &a[i], 1) != 1) {
-            printf("Nhap sai! Vui long nhap lai.\n");
-            while (getchar() != '\n'); 
-        }
-    }
-}
-
-void nhap_mang_str(char** a, int n) {
-    for (int i = 0; i < n; i++) {
-        printf("Nhap a[%d]: ", i);
-        if (scanf_s("%99s", a[i], 100) != 1) { 
-            printf("Nhap sai! Vui long nhap lai.\n");
-            while (getchar() != '\n'); 
-        }
-    }
-}
-
-void xuat_mang_int(const int* a, int n) {
-    for (int i = 0; i < n; i++) {
-        printf("%d ", a[i]);
-    }
-    printf("\n");
-}
-
-void xuat_mang_float(const float* a, int n) {
-    for (int i = 0; i < n; i++) {
-        printf("%f ", a[i]);
-    }
-    printf("\n");
-}
-
-void xuat_mang_char(const char* a, int n) {
-    for (int i = 0; i < n; i++) {
-        printf("%c ", a[i]);
-    }
-    printf("\n");
-}
-
-void xuat_mang_str(char** a, int n) {
-    for (int i = 0; i < n; i++) {
-        if (a[i]) { 
-            printf("%s ", a[i]);
-        }
-        else {
-            printf("NULL ");
-        }
-    }
-    printf("\n");
+    return true;
 }
 
 int main() {
     int lua_chon, n;
+
     printf("Nhap so phan tu cua mang: ");
     if (scanf_s("%d", &n) != 1 || n <= 0) {
         printf("Nhap sai! Vui long nhap lai.\n");
         return 1;
     }
 
-    int* int_array = (int*)malloc(n * sizeof(int));
-    float* float_array = (float*)malloc(n * sizeof(float));
-    char* char_array = (char*)malloc(n * sizeof(char));
-    char** str_array = (char**)malloc(n * sizeof(char*));
-
-    for (int i = 0; i < n; i++) {
-        str_array[i] = (char*)malloc(100 * sizeof(char));
+    int* a = (int*)malloc(n * sizeof(int)); 
+    if (a == NULL) {
+        printf("Khong the cap phat bo nho.\n");
+        return 1;
     }
 
-    if (!int_array || !float_array || !char_array || !str_array) {
-        printf("Khong du bo nho!\n");
-        return 1;
+
+    printf("Nhap cac phan tu cua mang:\n");
+    for (int i = 0; i < n; i++) {
+        printf("Nhap a[%d]: ", i);
+        if (scanf_s("%d", &a[i]) != 1) {
+            printf("Nhap sai! Vui long nhap lai.\n");
+            while (getchar() != '\n'); 
+            i--; 
+        }
     }
 
     do {
         printf("\nMenu\n");
-        printf("1. Nhap xuat va sap xep so nguyen\n");
-        printf("2. Nhap xuat va sap xep so thuc\n");
-        printf("3. Nhap xuat va sap xep ky tu\n");
-        printf("4. Nhap xuat va sap xep chuoi ky tu\n");
+        printf("1. Dem so phan tu la so nguyen to\n");
+        printf("2. Xuat cac phan tu co cac chu so la so le\n");
+        printf("3. Tim vi tri cuoi cung cua so lon nhat trong mang\n");
+        printf("4. Kiem tra mang co toan la so chan khong\n");
+        printf("5. Kiem tra mang co phai la day so chan le xen ke khong\n");
         printf("0. Thoat\n");
         printf("Lua chon cua ban: ");
         if (scanf_s("%d", &lua_chon) != 1) {
@@ -220,55 +64,33 @@ int main() {
 
         switch (lua_chon) {
         case 1: {
-            printf("Nhap mang so nguyen:\n");
-            nhap_mang_int(int_array, n);
-            printf("Mang vua nhap: ");
-            xuat_mang_int(int_array, n);
-            sap_xep_tang_int(int_array, n);
-            printf("Mang sap xep tang dan: ");
-            xuat_mang_int(int_array, n);
-            sap_xep_giam_int(int_array, n);
-            printf("Mang sap xep giam dan: ");
-            xuat_mang_int(int_array, n);
+            int dem = 0;
+            for (int i = 0; i < n; i++) {
+                if (la_so_nguyen_to(a[i])) dem++;
+            }
+            printf("So phan tu la so nguyen to: %d\n", dem);
             break;
         }
         case 2: {
-            printf("Nhap mang so thuc:\n");
-            nhap_mang_float(float_array, n);
-            printf("Mang vua nhap: ");
-            xuat_mang_float(float_array, n);
-            sap_xep_tang_float(float_array, n);
-            printf("Mang sap xep tang dan: ");
-            xuat_mang_float(float_array, n);
-            sap_xep_giam_float(float_array, n);
-            printf("Mang sap xep giam dan: ");
-            xuat_mang_float(float_array, n);
+            printf("Cac phan tu co cac chu so la so le: ");
+            for (int i = 0; i < n; i++) {
+                if (tat_ca_chu_so_le(a[i])) {
+                    printf("%d ", a[i]);
+                }
+            }
+            printf("\n");
             break;
         }
         case 3: {
-            printf("Nhap mang ky tu:\n");
-            nhap_mang_char(char_array, n);
-            printf("Mang vua nhap: ");
-            xuat_mang_char(char_array, n);
-            sap_xep_tang_char(char_array, n);
-            printf("Mang sap xep tang dan: ");
-            xuat_mang_char(char_array, n);
-            sap_xep_giam_char(char_array, n);
-            printf("Mang sap xep giam dan: ");
-            xuat_mang_char(char_array, n);
-            break;
-        }
-        case 4: {
-            printf("Nhap mang chuoi ky tu:\n");
-            nhap_mang_str(str_array, n);
-            printf("Mang vua nhap: ");
-            xuat_mang_str(str_array, n);
-            sap_xep_tang_str(str_array, n);
-            printf("Mang sap xep tang dan: ");
-            xuat_mang_str(str_array, n);
-            sap_xep_giam_str(str_array, n);
-            printf("Mang sap xep giam dan: ");
-            xuat_mang_str(str_array, n);
+            int max = a[0];
+            int vi_tri_cuoi = 0;
+            for (int i = 0; i < n; i++) {
+                if (a[i] >= max) {
+                    max = a[i];
+                    vi_tri_cuoi = i;
+                }
+            }
+            printf("Vi tri cuoi cung cua so lon nhat: %d\n", vi_tri_cuoi);
             break;
         }
         case 0:
@@ -279,13 +101,6 @@ int main() {
         }
     } while (lua_chon != 0);
 
-    free(int_array);
-    free(float_array);
-    free(char_array);
-    for (int i = 0; i < n; i++) {
-        free(str_array[i]);
-    }
-    free(str_array);
-
+    free(a); 
     return 0;
 }
