@@ -28,6 +28,7 @@ void nhap_danh_sach(PhanSo arr[], int* n) {
     }
 }
 
+
 // Hàm xuất danh sách các phân số
 void xuat_danh_sach(PhanSo arr[], int n) {
     for (int i = 0; i < n; ++i) {
@@ -60,6 +61,61 @@ PhanSo tim_phan_so_nho_nhat(PhanSo arr[], int n) {
         }
     }
     return min;
+}
+
+// Hàm tính tổng các phân số
+PhanSo tong_phan_so(PhanSo arr[], int n) {
+    PhanSo tong = { 0, 1 };
+    for (int i = 0; i < n; ++i) {
+        tong.tu_so = tong.tu_so * arr[i].mau_so + arr[i].tu_so * tong.mau_so;
+        tong.mau_so *= arr[i].mau_so;
+    }
+    return tong;
+}
+
+// Hàm tính tích các phân số
+PhanSo tich_phan_so(PhanSo arr[], int n) {
+    PhanSo tich = { 1, 1 };
+    for (int i = 0; i < n; ++i) {
+        tich.tu_so *= arr[i].tu_so;
+        tich.mau_so *= arr[i].mau_so;
+    }
+    return tich;
+}
+
+// Hàm tính nghịch đảo của phân số
+void nghich_dao_phan_so(PhanSo arr[], int n) {
+    for (int i = 0; i < n; ++i) {
+        int temp = arr[i].tu_so;
+        arr[i].tu_so = arr[i].mau_so;
+        arr[i].mau_so = temp;
+    }
+}
+
+// Hàm sắp xếp tăng dần
+void sap_xep_tang(PhanSo arr[], int n) {
+    for (int i = 0; i < n - 1; ++i) {
+        for (int j = i + 1; j < n; ++j) {
+            if ((arr[i].tu_so * arr[j].mau_so) > (arr[j].tu_so * arr[i].mau_so)) {
+                PhanSo temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+}
+
+// Hàm sắp xếp giảm dần
+void sap_xep_giam(PhanSo arr[], int n) {
+    for (int i = 0; i < n - 1; ++i) {
+        for (int j = i + 1; j < n; ++j) {
+            if ((arr[i].tu_so * arr[j].mau_so) < (arr[j].tu_so * arr[i].mau_so)) {
+                PhanSo temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
 }
 
 
@@ -99,6 +155,31 @@ void menu() {
             ket_qua = tim_phan_so_nho_nhat(arr, n);
             printf("Phan so nho nhat: ");
             xuat_danh_sach(&ket_qua, 1);
+            break;
+        case 5:
+            ket_qua = tong_phan_so(arr, n);
+            printf("Tong cac phan so: ");
+            xuat_danh_sach(&ket_qua, 1);
+            break;
+        case 6:
+            ket_qua = tich_phan_so(arr, n);
+            printf("Tich cac phan so: ");
+            xuat_danh_sach(&ket_qua, 1);
+            break;
+        case 7:
+            nghich_dao_phan_so(arr, n);
+            printf("Danh sach phan so sau khi nghich dao: ");
+            xuat_danh_sach(arr, n);
+            break;
+        case 8:
+            sap_xep_tang(arr, n);
+            printf("Danh sach phan so sau khi sap xep tang dan: ");
+            xuat_danh_sach(arr, n);
+            break;
+        case 9:
+            sap_xep_giam(arr, n);
+            printf("Danh sach phan so sau khi sap xep giam dan: ");
+            xuat_danh_sach(arr, n);
             break;
         case 0:
             printf("Thoat chuong trinh.\n");
