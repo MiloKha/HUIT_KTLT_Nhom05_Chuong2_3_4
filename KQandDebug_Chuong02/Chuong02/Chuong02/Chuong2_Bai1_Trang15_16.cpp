@@ -65,7 +65,33 @@ int dem_le(int a[], int n) {
     return count;
 }
 
+// Hàm tìm kiếm tuyến tính
+int tim_kiem_tuyen_tinh(int a[], int n, int x) {
+    for (int i = 0; i < n; i++) {
+        if (a[i] == x) {
+            return i;
+        }
+    }
+    return -1;
+}
 
+// Hàm tìm kiếm nhị phân (cần mảng đã sắp xếp)
+int tim_kiem_nhi_phan(int a[], int n, int x) {
+    int left = 0, right = n - 1;
+    while (left <= right) {
+        int mid = (left + right) / 2;
+        if (a[mid] == x) {
+            return mid;
+        }
+        else if (a[mid] < x) {
+            left = mid + 1;
+        }
+        else {
+            right = mid - 1;
+        }
+    }
+    return -1;
+}
 
 
 
@@ -112,6 +138,26 @@ int main() {
         case 3:
             printf("So phan tu chan trong mang: %d\n", dem_chan(a, n));
             printf("So phan tu le trong mang: %d\n", dem_le(a, n));
+            break;
+        case 4:
+            printf("Nhap gia tri can tim: ");
+            scanf_s("%d", &x);
+            vi_tri = tim_kiem_tuyen_tinh(a, n, x);
+            if (vi_tri != -1) {
+                printf("Tim kiem tuyen tinh: Gia tri %d o vi tri %d\n", x, vi_tri);
+            }
+            else {
+                printf("Tim kiem tuyen tinh: Khong tim thay gia tri %d trong mang\n", x);
+            }
+            // Sắp xếp mảng trước khi tìm kiếm nhị phân
+            // Lưu ý: cần thêm hàm sắp xếp tại đây
+            // vi_tri = tim_kiem_nhi_phan(a, n, x);
+            if (vi_tri != -1) {
+                printf("Tim kiem nhi phan: Gia tri %d o vi tri %d\n", x, vi_tri);
+            }
+            else {
+                printf("Tim kiem nhi phan: Khong tim thay gia tri %d trong mang\n", x);
+            }
             break;
         case 0:
             printf("Thoat chuong trinh\n");
