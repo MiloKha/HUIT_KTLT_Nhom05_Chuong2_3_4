@@ -115,7 +115,14 @@ int dem_lon_hon_x(int a[], int n, int x) {
     return count;
 }
 
-
+// Hàm tính tổng các phần tử của mảng
+int tong_mang(int a[], int n) {
+    int sum = 0;
+    for (int i = 0; i < n; i++) {
+        sum += a[i];
+    }
+    return sum;
+}
 
 int main() {
     int lua_chon, n, x, vi_tri;
@@ -189,6 +196,9 @@ int main() {
             printf("Nhap gia tri x: ");
             scanf_s("%d", &x);
             printf("So phan tu lon hon %d trong mang: %d\n", x, dem_lon_hon_x(a, n, x));
+            break;
+        case 7:
+            printf("Tong cac phan tu trong mang: %d\n", tong_mang(a, n));
             break;
         case 0:
             printf("Thoat chuong trinh\n");
