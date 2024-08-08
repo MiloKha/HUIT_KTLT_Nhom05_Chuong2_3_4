@@ -1,4 +1,4 @@
 ﻿  Chuong2_Bai1_Trang15_16.cpp
-D:\Zalo\KTLT\HUIT_KTLT_Nhom05_Chuong2_3_4\KQandDebug_Chuong02\Chuong02\Chuong02\Chuong2_Bai1_Trang15_16.cpp(47,25): warning C4101: 'vi_tri': unreferenced local variable
-D:\Zalo\KTLT\HUIT_KTLT_Nhom05_Chuong2_3_4\KQandDebug_Chuong02\Chuong02\Chuong02\Chuong2_Bai1_Trang15_16.cpp(47,22): warning C4101: 'x': unreferenced local variable
+D:\Zalo\KTLT\HUIT_KTLT_Nhom05_Chuong2_3_4\KQandDebug_Chuong02\Chuong02\Chuong02\Chuong2_Bai1_Trang15_16.cpp(74,25): warning C4101: 'vi_tri': unreferenced local variable
+D:\Zalo\KTLT\HUIT_KTLT_Nhom05_Chuong2_3_4\KQandDebug_Chuong02\Chuong02\Chuong02\Chuong2_Bai1_Trang15_16.cpp(74,22): warning C4101: 'x': unreferenced local variable
   Chuong02.vcxproj -> D:\Zalo\KTLT\HUIT_KTLT_Nhom05_Chuong2_3_4\KQandDebug_Chuong02\Chuong02\x64\Debug\Chuong02.exe

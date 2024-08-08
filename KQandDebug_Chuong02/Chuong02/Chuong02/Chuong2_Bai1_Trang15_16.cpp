@@ -43,6 +43,33 @@ int tim_min(int a[], int n) {
     return min;
 }
 
+// Hàm đếm số phần tử chẵn
+int dem_chan(int a[], int n) {
+    int count = 0;
+    for (int i = 0; i < n; i++) {
+        if (a[i] % 2 == 0) {
+            count++;
+        }
+    }
+    return count;
+}
+
+// Hàm đếm số phần tử lẻ
+int dem_le(int a[], int n) {
+    int count = 0;
+    for (int i = 0; i < n; i++) {
+        if (a[i] % 2 != 0) {
+            count++;
+        }
+    }
+    return count;
+}
+
+
+
+
+
+
 int main() {
     int lua_chon, n, x, vi_tri;
     printf("Nhap so phan tu cua mang: ");
@@ -81,6 +108,10 @@ int main() {
         case 2:
             printf("Gia tri lon nhat cua mang: %d\n", tim_max(a, n));
             printf("Gia tri nho nhat cua mang: %d\n", tim_min(a, n));
+            break;
+        case 3:
+            printf("So phan tu chan trong mang: %d\n", dem_chan(a, n));
+            printf("So phan tu le trong mang: %d\n", dem_le(a, n));
             break;
         case 0:
             printf("Thoat chuong trinh\n");
