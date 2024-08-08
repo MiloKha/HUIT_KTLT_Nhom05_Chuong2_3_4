@@ -202,6 +202,24 @@ void xuat_max_min_va_vi_tri(int a[], int n) {
     printf("\n");
 }
 
+// Hàm ghép hai dãy tăng dần thành một dãy tăng dần
+void ghep_day_tang_dan(int b[], int m, int c[], int n, int a[]) {
+    int i = 0, j = 0, k = 0;
+    while (i < m && j < n) {
+        if (b[i] < c[j]) {
+            a[k++] = b[i++];
+        }
+        else {
+            a[k++] = c[j++];
+        }
+    }
+    while (i < m) {
+        a[k++] = b[i++];
+    }
+    while (j < n) {
+        a[k++] = c[j++];
+    }
+}
 
 int main() {
     int lua_chon, n, x, vi_tri;
@@ -292,6 +310,30 @@ int main() {
         case 11:
             xuat_max_min_va_vi_tri(a, n);
             break;
+        case 12: {
+            int m;
+            printf("Nhap so phan tu cua mang b: ");
+            scanf_s("%d", &m);
+            int* b = (int*)malloc(m * sizeof(int));
+            if (b == NULL) {
+                printf("Khong the cap phat bo nho.\n");
+                break;
+            }
+            printf("Nhap mang b:\n");
+            nhap_mang(b, m);
+            int* c = (int*)malloc((n + m) * sizeof(int));
+            if (c == NULL) {
+                printf("Khong the cap phat bo nho.\n");
+                free(b);
+                break;
+            }
+            ghep_day_tang_dan(a, n, b, m, c);
+            printf("Mang sau khi ghep va sap xep: ");
+            xuat_mang(c, n + m);
+            free(b);
+            free(c);
+            break;
+        }
         case 0:
             printf("Thoat chuong trinh\n");
             break;
