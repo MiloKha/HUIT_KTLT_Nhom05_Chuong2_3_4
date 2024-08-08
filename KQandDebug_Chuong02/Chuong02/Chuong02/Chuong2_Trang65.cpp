@@ -30,6 +30,56 @@ void xuat_phan_so(PhanSo ps) {
 }
 
 
+// Hàm tìm ước số chung lớn nhất
+int uoc_so_chung_lon_nhat(int a, int b) {
+    if (b == 0) return a;
+    return uoc_so_chung_lon_nhat(b, a % b);
+}
+
+// Hàm tối giản phân số
+void toi_gian_phan_so(PhanSo* ps) {
+    int ucln = uoc_so_chung_lon_nhat(ps->tu_so, ps->mau_so);
+    ps->tu_so /= ucln;
+    ps->mau_so /= ucln;
+}
+
+// Hàm tính tổng của hai phân số
+PhanSo tong_phan_so(PhanSo ps1, PhanSo ps2) {
+    PhanSo ket_qua;
+    ket_qua.tu_so = ps1.tu_so * ps2.mau_so + ps2.tu_so * ps1.mau_so;
+    ket_qua.mau_so = ps1.mau_so * ps2.mau_so;
+    toi_gian_phan_so(&ket_qua);
+    return ket_qua;
+}
+
+// Hàm tính hiệu của hai phân số
+PhanSo hieu_phan_so(PhanSo ps1, PhanSo ps2) {
+    PhanSo ket_qua;
+    ket_qua.tu_so = ps1.tu_so * ps2.mau_so - ps2.tu_so * ps1.mau_so;
+    ket_qua.mau_so = ps1.mau_so * ps2.mau_so;
+    toi_gian_phan_so(&ket_qua);
+    return ket_qua;
+}
+
+// Hàm tính tích của hai phân số
+PhanSo tich_phan_so(PhanSo ps1, PhanSo ps2) {
+    PhanSo ket_qua;
+    ket_qua.tu_so = ps1.tu_so * ps2.tu_so;
+    ket_qua.mau_so = ps1.mau_so * ps2.mau_so;
+    toi_gian_phan_so(&ket_qua);
+    return ket_qua;
+}
+
+// Hàm tính thương của hai phân số
+PhanSo thuong_phan_so(PhanSo ps1, PhanSo ps2) {
+    PhanSo ket_qua;
+    ket_qua.tu_so = ps1.tu_so * ps2.mau_so;
+    ket_qua.mau_so = ps1.mau_so * ps2.tu_so;
+    toi_gian_phan_so(&ket_qua);
+    return ket_qua;
+}
+
+
 void menu() {
     PhanSo ps1, ps2, ket_qua;
     int lua_chon;
@@ -62,6 +112,26 @@ void menu() {
         case 4:
             printf("Phan so 2: ");
             xuat_phan_so(ps2);
+            break;
+        case 5:
+            ket_qua = tong_phan_so(ps1, ps2);
+            printf("Tong hai phan so: ");
+            xuat_phan_so(ket_qua);
+            break;
+        case 6:
+            ket_qua = hieu_phan_so(ps1, ps2);
+            printf("Hieu hai phan so: ");
+            xuat_phan_so(ket_qua);
+            break;
+        case 7:
+            ket_qua = tich_phan_so(ps1, ps2);
+            printf("Tich hai phan so: ");
+            xuat_phan_so(ket_qua);
+            break;
+        case 8:
+            ket_qua = thuong_phan_so(ps1, ps2);
+            printf("Thuong hai phan so: ");
+            xuat_phan_so(ket_qua);
             break;
         case 0:
             printf("Thoat chuong trinh.\n");
