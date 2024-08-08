@@ -36,6 +36,28 @@ bool mang_tang_dan(int* a, int n) {
     return true;
 }
 
+
+// Hàm kiểm tra mảng có giảm dần không
+bool mang_giam_dan(int* a, int n) {
+    for (int i = 1; i < n; i++) {
+        if (a[i] > a[i - 1]) return false;
+    }
+    return true;
+}
+
+// Hàm kiểm tra mảng có tăng dần, giảm dần hoặc không tăng không giảm
+void kiem_tra_mang(int* a, int n) {
+    if (mang_tang_dan(a, n)) {
+        printf("Mang tang dan.\n");
+    }
+    else if (mang_giam_dan(a, n)) {
+        printf("Mang giam dan.\n");
+    }
+    else {
+        printf("Mang khong tang khong giam.\n");
+    }
+}
+
 int main() {
     int lua_chon, n;
 
@@ -92,6 +114,10 @@ int main() {
             else {
                 printf("Mang khong doi xung.\n");
             }
+            break;
+        }
+        case 3: {
+            kiem_tra_mang(a, n);
             break;
         }
         case 0:
