@@ -15,20 +15,23 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Chuong2_Bai1_Trang15_16.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="Chuong2_Bai3_DSSV_Trang71.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Chuong2_Bai3_TTSV_Trang70.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Chuong2_Mang2C_Trang78.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Chuong2_Mang2C_Trang82.cpp">
-      <Filter>Resource Files</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Chuong2_Mang2C_Trang86.cpp">
-      <Filter>Resource Files</Filter>
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Chuong2_Mang2C_Trang82.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Chuong2_Mang2C_Trang78.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Chuong2_Bai3_TTSV_Trang70.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -1,2 +1,5 @@
-﻿  Chuong2_Bai3_DSSV_Trang71.cpp
-  Chuong02.vcxproj -> C:\Users\lephu\OneDrive\Desktop\Chuong02\x64\Debug\Chuong02.exe
+﻿  Chuong2_Bai1_Trang15_16.cpp
+D:\Zalo\KTLT\HUIT_KTLT_Nhom05_Chuong2_3_4\KQandDebug_Chuong02\Chuong02\Chuong02\Chuong2_Bai1_Trang15_16.cpp(25,25): warning C4101: 'vi_tri': unreferenced local variable
+D:\Zalo\KTLT\HUIT_KTLT_Nhom05_Chuong2_3_4\KQandDebug_Chuong02\Chuong02\Chuong02\Chuong2_Bai1_Trang15_16.cpp(25,22): warning C4101: 'x': unreferenced local variable
+  LINK : D:\Zalo\KTLT\HUIT_KTLT_Nhom05_Chuong2_3_4\KQandDebug_Chuong02\Chuong02\x64\Debug\Chuong02.exe not found or not built by the last incremental link; performing full link
+  Chuong02.vcxproj -> D:\Zalo\KTLT\HUIT_KTLT_Nhom05_Chuong2_3_4\KQandDebug_Chuong02\Chuong02\x64\Debug\Chuong02.exe
